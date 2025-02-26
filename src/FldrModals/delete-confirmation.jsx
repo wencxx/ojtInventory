@@ -39,7 +39,7 @@ function DeleteConfirmation({ setShowConfirmation, productToDelete }) {
                     <X size={20} onClick={() => setShowConfirmation(false)} className="cursor-pointer" />
                 </div>
                 <div className="p-5">
-                    <p className="">Are you sure you want to delete this product?</p>
+                    <p className="">Are you sure you want to delete the product with product code of <span className="font-medium">{productToDelete.productCode}</span>?</p>
                 </div>
                 <div className="p-5 border-t flex justify-end gap-x-3">
                     <Button type="button" className="cursor-pointer" onClick={() => setShowConfirmation(false)} variant="ghost" size="sm">Cancel</Button>

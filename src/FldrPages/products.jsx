@@ -40,7 +40,7 @@ function Products() {
             <div className="bg-white p-5 rounded border shadow">
                 <Button size="sm" className="float-end mb-5" onClick={() => setShowAddmodal(true)}>
                     <Plus />
-                    <span>Button</span>
+                    <span>Add Product</span>
                 </Button>
                 <ProductTable products={products} showModal={showModalClick} showConfirmation={showConfirmationlClick} />
             </div>

@@ -15,7 +15,7 @@ export const useProductStore = create((set) => ({
     },
     updateProduct: async (prodDetails) => {
         try {
-            await axios.put(`${connectNaBaby()}/API/UpdateWEBAPI/UpdateProduct`, { ...prodDetails })
+            await axios.put(`${connectNaBaby()}/API/UpdateWEBAPI/UpdateProduct`, prodDetails)
             set((state) => state.getProducts())
         } catch (error) {
             console.log(error)  
@@ -24,7 +24,7 @@ export const useProductStore = create((set) => ({
     },
     deleteProduct: async (prodDetails) => {
         try {
-            await axios.post(`${connectNaBaby()}/API/WEBAPI/WEBAPIDelete/DeleteModelProduct`, { ...prodDetails })
+            await axios.post(`${connectNaBaby()}/API/WEBAPI/WEBAPIDelete/DeleteModelProduct`, prodDetails)
             set((state) => state.getProducts())
         } catch (error) {
             console.log(error)  
@@ -33,7 +33,7 @@ export const useProductStore = create((set) => ({
     },
     addProduct: async (prodDetails) => {
         try {
-            await axios.post(`${connectNaBaby()}/API/WEBAPI/InsertController/InsertProduct`, { ...prodDetails })
+            await axios.post(`${connectNaBaby()}/API/WEBAPI/InsertController/InsertProduct`, prodDetails)
             set((state) => state.getProducts())
         } catch (error) {
             console.log(error)  

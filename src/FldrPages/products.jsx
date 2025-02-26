@@ -38,11 +38,11 @@ function Products() {
     return ( 
         <div className="p-10">
             <div className="bg-white p-5 rounded border shadow">
-                <Button size="sm" className="float-end mb-5" onClick={() => setShowAddmodal(true)}>
-                    <Plus />
-                    <span>Add Product</span>
+                <Button size="sm" className="mb-5 cursor-pointer" onClick={() => setShowAddmodal(true)}>
+                        <Plus />
+                        <span>Add Product</span>
                 </Button>
-                <ProductTable products={products} showModal={showModalClick} showConfirmation={showConfirmationlClick} />
+                <ProductTable data={products} showModal={showModalClick} showConfirmation={showConfirmationlClick} />
             </div>
             {showModal ? <EditModal setShowModal={setShowModal} productToEdit={productToEdit}  /> : ''}
             {showConfirmation ? <DeleteConfirmation setShowConfirmation={setShowConfirmation} productToDelete={productToDelete}  /> : ''}
